@@ -8,8 +8,8 @@ class App extends Component {
     super()
     this.state = {
       auth: {
-        isLoggedIn: false,
-        token: {}
+        isLoggedIn: true,
+        token: 'Bay1mxnKcjQq5Gw0OH0NBQgFurrIS5E-C8FZv4ZbcRt9u6PGTKJqZMz_E9zgOKfHGkgzeHjpxI3QlgbxRel4lQvoACI12ndRAcUwNflVraiQnS4SySXb__bdsLeRWXYx'
       }
     }
     this.login = this.login.bind(this)
@@ -18,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <RestaurantsContainer />
+        <RestaurantsContainer token={this.state.token} />
       </div>
     );
   }
