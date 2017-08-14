@@ -5,7 +5,7 @@ Please build a web application that provides an easy to use, sortable interface 
 
 *Minimum App Features:*
 
-+ Use the Yelp! Api to retrieve data on restaurants
++ Use the [Yelp! Api](https://www.yelp.com/developers/documentation/v3) to retrieve data on restaurants
 + Allow users to search for restaurants by city
 + Allow sorting by price and rating
 + Display 20 restaurants at a time, with each linked to the yelp page for that restaurant
