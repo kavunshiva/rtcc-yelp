@@ -22,6 +22,3 @@ Please build a web application that provides an easy to use, sortable interface 
 1. Get a client ID and secret from Yelp. Per [Yelp's authentication documentation](https://www.yelp.com/developers/documentation/v3/authentication), go to their [Create App page](https://www.yelp.com/developers/v3/manage_app) and enter the information relevant to the app (you will need [to be logged in to] a Yelp account for this). Save the client ID and secret, as you'll use them as your login to the app.
 2. Run `npm install` and then `npm start` from the command line to download necessary libraries and then run a development version of the app locally.
 3. Navigate to the local address listed in the console (if you haven't been redirected already).
-
-## Use
-1. Log in using the client ID and secret from Yelp. (In addition to logging you in to the app, this will get and locally cache the Yelp API access token necessary for making all subsequent API calls.)
