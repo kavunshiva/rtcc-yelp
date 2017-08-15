@@ -1,24 +1,20 @@
-const yelpAuthUrl = "https://api.yelp.com/oauth2/token"
+// const yelpAuthUrl = "https://api.yelp.com/oauth2/token"
+const yelpSearchApi = 'http://localhost:3000/api/v1/restaurants/search'
 
-let token = ''
+const parseParams = (params) => {
+  let query = `?location=${params.location}`
+  Object.keys(params).map(param => {
+    if(param !== 'location'){
+      query += `&${param}=${params[param]}`
+    }
+  })
+  return query
+}
 
-const headers = () => (
-  {
-    'comtent-type': 'application/x-www-form-urlencoded',
-    'Authorization': `Bearer ${token}`
+export class RestaurantsAdapter {
+  static getRestaurantsByCity(params){
+    const searchUrl = yelpSearchApi + parseParams(params)
+    return fetch(searchUrl).then(res => res.json())
   }
-)
 
-export class AuthAdapter {
-  static login(params){
-    return fetch(yelpAuthUrl, {
-      method: 'POST',
-      headers: headers(),
-      body: JSON.stringify({
-        'grant_type': 'client_credentials',
-        'client_id': params.clientId,
-        'client_secret': params.clientSecret
-      })
-    }).then(res => res.json())
-  }
 }
