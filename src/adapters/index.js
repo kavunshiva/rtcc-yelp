@@ -1,5 +1,6 @@
 // const yelpAuthUrl = "https://api.yelp.com/oauth2/token"
-const yelpSearchApi = 'http://localhost:3000/api/v1/restaurants/search'
+// const yelpSearchApi = 'http://localhost:3000/api/v1/restaurants/search'
+const yelpSearchApi = 'https://rtcc-yelp-api.herokuapp.com/api/v1/restaurants/search'
 
 const parseParams = (params) => {
   let query = `?location=${params.location}`
